@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/read", Article.articleRead);
+app.get("/read/:id", Article.articleFindOne);
 app.post("/create", Article.articleCreate);
 app.patch("/update", Article.articleUpdate);
 app.delete("/delete/:id", Article.articleDelete);

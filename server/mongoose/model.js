@@ -12,7 +12,7 @@ const model = (() => {
   // Atlas mongodb cluster와 연결
   mongoose.connect(
     `mongodb+srv://${process.env.DB_ID}:${process.env.DB_PASSWORD}@firstfullstackapp.zks28.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
   );
 
   // 스키마 연결
